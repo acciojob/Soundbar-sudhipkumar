@@ -1,11 +1,11 @@
  const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong'];
     const soundMap = {
-      applause: 'https://assets.mixkit.co/sfx/preview/mixkit-small-crowd-applause-487.mp3',
-      boo: 'https://assets.mixkit.co/sfx/preview/mixkit-audience-boo-369.mp3',
-      gasp: 'https://assets.mixkit.co/sfx/preview/mixkit-cartoon-surprise-gasp-1023.mp3',
-      tada: 'https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2011.mp3',
-      victory: 'https://assets.mixkit.co/sfx/preview/mixkit-game-level-completed-2059.mp3',
-      wrong: 'https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-buzz-950.mp3'
+      applause: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f60f4a3d4.mp3',
+      boo: 'https://cdn.pixabay.com/download/audio/2021/08/09/audio_55cb373fe0.mp3',
+      gasp: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_d5e3eb2b18.mp3',
+      tada: 'https://cdn.pixabay.com/download/audio/2021/08/04/audio_c96b3e4cb9.mp3',
+      victory: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_872d08e0c4.mp3',
+      wrong: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_ae0311f3d3.mp3'
     };
 
     const buttonsContainer = document.getElementById('buttons');
@@ -18,7 +18,9 @@
       btn.addEventListener('click', () => {
         stopSound();
         currentAudio = new Audio(soundMap[sound]);
-        currentAudio.play();
+        currentAudio.play()
+          .then(() => console.log(`${sound} is playing`))
+          .catch(err => console.error(`Error playing ${sound}:`, err));
       });
       buttonsContainer.appendChild(btn);
     });
@@ -34,5 +36,6 @@
       if (currentAudio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
+        console.log('Stopped audio');
       }
     }
