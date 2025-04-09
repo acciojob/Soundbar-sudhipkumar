@@ -1,10 +1,10 @@
 const sounds = {
   applause: 'https://www.soundjay.com/human/applause-01.mp3',
-  boo: 'https://www.soundjay.com/human/boo-01.mp3',
-  gasp: 'https://www.soundjay.com/human/gasp-01.mp3',
-  tada: 'https://www.soundjay.com/button/beep-07.wav',
-  victory: 'https://www.soundjay.com/misc/small-crowd-cheer-01.mp3',
-  wrong: 'https://www.soundjay.com/misc/fail-buzzer-01.mp3'
+  babyCrying: 'https://www.soundjay.com//human/sounds/baby-crying-01.mp3',
+  crowdTalking: 'https://www.soundjay.com//human/sounds/crowd-talking-1.mp3',
+  footStep: 'https://www.soundjay.com//footsteps/sounds/footsteps-1.mp3',
+  heartBeat: 'https://www.soundjay.com//human/sounds/heartbeat-01a.mp3',
+  laughing: 'https://www.soundjay.com//human/sounds/man-laughing-01.mp3'
 };
 
 
